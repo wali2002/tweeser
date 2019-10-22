@@ -6,7 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import java.util.concurrent.TimeUnit;
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void startSearchEngine(View view)
+    public void startSearchEngine(View view) throws IOException
     {
         Intent intent = new Intent(this,SearchEngine.class);
         startActivity(intent);
